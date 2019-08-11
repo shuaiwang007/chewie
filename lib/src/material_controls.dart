@@ -165,30 +165,33 @@ class _MaterialControlsState extends State<MaterialControls> {
                   _hideStuff = true;
                 });
               },
-//        child: Container(
-//          color: Colors.transparent,
-//          child: Center(
-//            child: AnimatedOpacity(
-//              opacity:
-//                  _latestValue != null && !_latestValue.isPlaying && !_dragging
-//                      ? 1.0
-//                      : 0.0,
-//              duration: Duration(milliseconds: 300),
-//              child: GestureDetector(
-//                child: Container(
-//                  decoration: BoxDecoration(
-//                    color: Theme.of(context).dialogBackgroundColor,
-//                    borderRadius: BorderRadius.circular(48.0),
-//                  ),
-//                  child: Padding(
-//                    padding: EdgeInsets.all(12.0),
-//                    child: Icon(Icons.play_arrow, size: 32.0),
-//                  ),
-//                ),
-//              ),
-//            ),
-//          ),
-//        ),
+        child: Container(
+          color: Colors.transparent,
+          child: Center(
+            child: AnimatedOpacity(
+              opacity:
+                  _latestValue != null && !_latestValue.isPlaying && !_dragging
+                      ? 1.0
+                      : 0.0,
+              duration: Duration(milliseconds: 300),
+              child: GestureDetector(
+                child: Opacity(
+                  opacity: 0.7,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(40.0),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(12.0),
+                      child: Icon(Icons.play_arrow, size: 32.0, color: Colors.white,),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
